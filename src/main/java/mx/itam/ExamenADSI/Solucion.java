@@ -1,6 +1,6 @@
 package mx.itam.ExamenADSI;
 
-import com.oracle.tools.packager.Log;
+import org.apache.logging.log4j.*;
 
 /**
  * Clase Solucion que tiene el metodo main usado.
@@ -17,7 +17,7 @@ public class Solucion {
      * @return Node Regresa el primero que se creÃ³.
      */
     private Node build() {
-        Log.debug("Creando nodos...");
+        //Log.debug("Creando nodos...");
         Node n1 = new Node("A");
         Node n2 = new Node("B");
         Node n3 = new Node("C");
@@ -29,7 +29,7 @@ public class Solucion {
         n3.next = n4;
         n4.next = n5;
         n5.next = n6;
-        Log.debug("Nodos creados");
+        //Log.debug("Nodos creados");
         return n1;
     }
 
@@ -39,30 +39,30 @@ public class Solucion {
     public void ok() {
 
         Node a = build();
-        Log.debug("Imprimiendo Nodo A");
+        //Log.debug("Imprimiendo Nodo A");
         a.prn();
-        Log.debug("Volteando Nodo");
+        //Log.debug("Volteando Nodo");
         a = a.gus();
-        Log.debug("Imprimiendo Lista volteada");
+        //Log.debug("Imprimiendo Lista volteada");
         a.prn();
-        Log.debug("Volteando Nodo");
+        //Log.debug("Volteando Nodo");
         a = a.gus();
-        Log.debug("Imprimiendo Lista volteada");
+        //Log.debug("Imprimiendo Lista volteada");
         a.prn();
-        Log.debug("Creando nuevo Nodo");
+        //Log.debug("Creando nuevo Nodo");
         Node b = new Node("X");
-        Log.debug("Volteando Nodo");
+        //Log.debug("Volteando Nodo");
         b = b.gus();
-        Log.debug("Imprimiendo nodo");
+        //Log.debug("Imprimiendo nodo");
         b.prn();
-        Log.debug("Creando nuevos nodos");
+        //Log.debug("Creando nuevos nodos");
         Node c = new Node("X");
         Node d = new Node("Y");
-        Log.debug("Relacionandolos");
+        //Log.debug("Relacionandolos");
         c.next = d;
-        Log.debug("Invirtiendo el orden");
+        //Log.debug("Invirtiendo el orden");
         c = c.gus();
-        Log.debug("Imprimiendo");
+        //Log.debug("Imprimiendo");
         c.prn();
     }
 
